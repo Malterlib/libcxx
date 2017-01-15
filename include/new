@@ -159,6 +159,7 @@ _LIBCPP_FUNC_VIS new_handler set_new_handler(new_handler) _NOEXCEPT;
 _LIBCPP_FUNC_VIS new_handler get_new_handler() _NOEXCEPT;
 
 }  // std
+#ifndef _LIBCPP_DISABLE_NEW_DELETE
 
 #if defined(_LIBCPP_CXX03_LANG)
 #define _THROW_BAD_ALLOC throw(std::bad_alloc)
@@ -204,6 +205,7 @@ inline _LIBCPP_INLINE_VISIBILITY void* operator new  (std::size_t, void* __p) _N
 inline _LIBCPP_INLINE_VISIBILITY void* operator new[](std::size_t, void* __p) _NOEXCEPT {return __p;}
 inline _LIBCPP_INLINE_VISIBILITY void  operator delete  (void*, void*) _NOEXCEPT {}
 inline _LIBCPP_INLINE_VISIBILITY void  operator delete[](void*, void*) _NOEXCEPT {}
+#endif
 
 _LIBCPP_BEGIN_NAMESPACE_STD
 
