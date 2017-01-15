@@ -12,8 +12,8 @@
 #ifndef _LIBCPP_HAS_NO_THREADS
 #include "mutex"
 #include "thread"
-#endif
 #include "include/atomic_support.h"
+#endif
 
 _LIBCPP_BEGIN_NAMESPACE_STD
 
